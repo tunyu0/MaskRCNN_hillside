@@ -16,7 +16,7 @@ Source : https://www.muhendisbeyinler.net/mask-r-cnn-bir-nesne-tanima-algoritmas
 
 
 ## pre-processing : Label, Transform 
-使用Labelme對圖片座標註，每張圖片都有一個對應的json檔，要把json檔轉成可以餵給模型的格式，使用 labelme/Scripts 資料夾底下的`labelme_json_to_dataset.exe`來進行轉檔。  
+使用Labelme對圖片座標註，每張圖片都有一個對應的 json 檔，要把 json 檔轉成可以餵給模型的格式，使用 labelme/Scripts 資料夾底下的`labelme_json_to_dataset.exe`來進行轉檔。  
 ```
 python run_json.py
 ```
@@ -44,6 +44,8 @@ TRAIN_ROIS_PER_IMAGE : 訓練時每張圖要生成多少ROIs
   
 dataset_root_path : 訓練資料集(原圖+轉檔後的mask)路徑  
 init_with : 要重頭訓練or將預訓練權重設為初始值繼續訓練
+
+<img src="./figure/mrcnn_epoch.png" width="400" alt="設定epoch"/>
 
 ```
 python train.py
