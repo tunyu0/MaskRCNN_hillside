@@ -12,7 +12,7 @@
 <img src="./figure/mrcnn03.png" width="400" alt="語意分割"/>
 Instance Segmentation 會對圖片中的每一個像素點做分類,並且區分不同的物件。圖中的人可以區分個體又可以切割出輪廓。
   
-Source : https://www.muhendisbeyinler.net/mask-r-cnn-bir-nesne-tanima-algoritmasi/
+
 
 
 ## pre-processing : Label, Transform 
@@ -95,4 +95,5 @@ Inference:
 
 ## Reference
 [1] https://github.com/matterport/Mask_RCNN  
-[2] He, K., Gkioxari, G., Dollár, P., & Girshick, R. (2017). Mask r-cnn. In Proceedings of the IEEE international conference on computer vision (pp. 2961-2969).
+[2] https://www.muhendisbeyinler.net/mask-r-cnn-bir-nesne-tanima-algoritmasi  
+[3] He, K., Gkioxari, G., Dollár, P., & Girshick, R. (2017). Mask r-cnn. In Proceedings of the IEEE international conference on computer vision (pp. 2961-2969).
