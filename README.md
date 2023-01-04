@@ -16,7 +16,7 @@ Source : https://www.muhendisbeyinler.net/mask-r-cnn-bir-nesne-tanima-algoritmas
 
 
 ## pre-processing : Label, Transform 
-使用Labelme對圖片座標註，每張圖片都有一個對應的XML檔，要把XML檔轉成可以餵給模型的格式，使用`labelme_json_to_dataset.exe`來進行轉檔。  
+使用Labelme對圖片座標註，每張圖片都有一個對應的json檔，要把json檔轉成可以餵給模型的格式，使用 labelme/Scripts 資料夾底下的`labelme_json_to_dataset.exe`來進行轉檔。  
 ```
 python run_json.py
 ```
