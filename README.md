@@ -58,10 +58,14 @@ python train.py
 ## Inference
 本任務希望在偵測時，有些類別要區分個體，但最後還是會計算這張圖中各類別的總面積，來計算占整張圖的比例。
   
-要計算面積在這份code中可以善用 r\['masks'\] ，下圖的意思是經過轉換後得知這張圖有300000個pixels，模型偵測出16個Instances。  
+要計算面積在這份code中可以善用 r\['masks'\]。  
+以下圖為例，先是經過轉換後得知這張圖有300000個pixels，模型偵測出16個Instances。  
 下圖中 MASK1是一個二維矩陣，其值為 True 或 False。 True就是這個pixel屬於該個Instance，反之為False。    
 <img src="./figure/mrcnn_area.png" width="600" alt="計算面積"/>
 
+下圖中 將 MASK1 針對第0軸做加總，就可以得到這張圖中16個Instances 各自佔的 pixels 數。
+<img src="./figure/mrcnn_area2.png" width="600" alt="計算面積2"/>
+後續可以將相同類別的Instance自行加總，再除以原圖的 Pixels 總數，就可以求得本任務需要的各類別占整張圖的比例!
 
 input:  
 <img src="https://upload.cc/i1/2023/01/04/9PItVO.jpg" width="700" alt="input原圖"/>
