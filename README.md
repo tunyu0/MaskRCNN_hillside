@@ -87,7 +87,7 @@ input:
 <img src="./figure/mrcnn04.jpg" width="700" alt="input"/>
 
 Inference:  
-<img src="./figure/mrcnn05.png" width="700" alt="output"/>  
+<img src="./figure/mrcnn06.png" width="700" alt="output"/>  
 給 Mask RCNN 做 Instance Segmentation 後，可以看到有兩個類別為「Green」的 Instances 有順利被區分出來，也有印出感興趣的類別在整張圖片中所佔的比例。  
 不過也發現輪廓還切割得不夠精細，是因為 Mask RCNN 的參數量較龐大，做 Instance Segmentation 的訓練時間也比較長，在 Colab 中只夠訓練10個 epochs 就被迫斷線了。  
 若在計算力強大且穩定的設備上做訓練更多個 epochs，可以讓模型切割得不夠精細。
