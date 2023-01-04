@@ -31,9 +31,24 @@ python run_json.py
 <img src="./figure/mrcnn_O.png" width="900" alt="正確"/>
 從上圖正確示範可以觀察到，這次有確實將「堤防」和「Green」區分個體，並且「水」這個類別不區分個體。
 
+## Deep learning framework
+Tensorflow : 1.15  
+Keras : 2.3.1
 
 
+## Training
+##### 注意參數 
+MODEL_DIR : 權重檔生成位置
+NUM_CLASSES = 1(背景) + <label總量>   
+TRAIN_ROIS_PER_IMAGE : 訓練時每張圖要生成多少ROIs  
+  
+dataset_root_path : 訓練資料集(原圖+轉檔後的mask)路徑  
+init_with : 要重頭訓練or將預訓練權重設為初始值繼續訓練
 
+```
+python train.py
+```
+訓練時間通常會比較久，
 
 
 
