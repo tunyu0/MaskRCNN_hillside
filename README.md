@@ -65,7 +65,7 @@ python train.py
 
 下圖中 將 MASK1 針對第0軸做加總，就可以得到這張圖中16個Instances 各自佔的 pixels 數。
 <img src="./figure/mrcnn_area2.png" width="600" alt="計算面積2"/>  
-後續可以將相同類別的Instance自行加總，再除以原圖的 Pixels 總數，就可以求得本任務需要的各類別占整張圖的比例!
+後續可以將相同類別的Instance自行加總，再除以原圖的 Pixels 總數，就可以求得本任務需要的各類別占整張圖的比例 !
 
 
 ##### 注意參數 
