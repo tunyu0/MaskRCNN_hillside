@@ -43,22 +43,23 @@ NUM_CLASSES = 1(背景) + <label總量>
 TRAIN_ROIS_PER_IMAGE : 訓練時每張圖要生成多少ROIs  
   
 dataset_root_path : 訓練資料集(原圖+轉檔後的mask)路徑  
-init_with : 要重頭訓練or將預訓練權重設為初始值繼續訓練
+init_with : 要從頭訓練或是做Transfer learning
 
-<img src="./figure/mrcnn_epoch.png" width="400" alt="設定epoch"/>
+設定epoch  
+<img src="./figure/mrcnn_epoch.png" width="400" alt="設定epoch"/>  
+layers='head' 的意思是只訓練heads層，也就是Backbone的(預訓練)權重先凍結，先訓練其他層的權重。  
+layers='all'  的意思是整個模型的權重都訓練，設定時數字要大於等於前者。  
+以上圖為例，會先在凍結Backbone權重的情況下先訓練100 epochs，再將整個模型的權重一起訓練 (200-100) epochs 。
 
 ```
 python train.py
 ```
-訓練時間通常會比較久，
+
+## Inference
+本任務希望在偵測時，有些類別要區分個體，但最後還是會計算這張圖中各類別的總面積，來計算占整張圖的比例。
 
 
 
-
-
-
-
-## Instance Segmentation
 input:  
 <img src="https://upload.cc/i1/2023/01/04/9PItVO.jpg" width="700" alt="input原圖"/>
 
