@@ -84,11 +84,15 @@ python myInference.py \
 
 
 input:  
-<img src="https://upload.cc/i1/2023/01/04/9PItVO.jpg" width="700" alt="input原圖"/>
+<img src="./figure/mrcnn04.jpg" width="700" alt="input"/>
 
-output:  
-<img src="https://upload.cc/i1/2023/01/04/NyS70l.png" width="700" alt="output預測圖片"/>
+Inference:  
+<img src="./figure/mrcnn05.png" width="700" alt="output"/>  
+給 Mask RCNN 做 Instance Segmentation 後，可以看到有兩個類別為「Green」的Instances 有被區分出來，也有印出感興趣的類別在整張圖片中所佔的比例。  
+不過也發現輪廓還切割得不夠精細，是因為 Mask RCNN 的參數量較龐大，做 Instance Segmentation 的訓練時間也比較長，在 Colab 中只夠訓練10個 epochs 就被迫斷線了。  
+若在計算力強大且穩定的設備上做訓練更多個 epochs，可以讓模型切割得不夠精細。
 
 
 ## Reference
-
+[1] https://github.com/matterport/Mask_RCNN
+[2] He, K., Gkioxari, G., Dollár, P., & Girshick, R. (2017). Mask r-cnn. In Proceedings of the IEEE international conference on computer vision (pp. 2961-2969).
