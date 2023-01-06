@@ -16,7 +16,9 @@ Instance Segmentation 會對圖片中的每一個像素點做分類,並且區分
 
 
 ## pre-processing : Label, Transform 
-使用Labelme對圖片座標註，每張圖片都有一個對應的 json 檔，要把 json 檔轉成可以餵給模型的格式，使用 labelme/Scripts 資料夾底下的`labelme_json_to_dataset.exe`來進行轉檔。  
+使用Labelme對圖片做標註，每張圖片都有一個對應的 json 檔，要把 json 檔轉成可以餵給模型的格式，常見的 Instance Segmentation 格式有 VOC格式和 COCO 格式，不管用哪一種格式都要檢查轉檔完的 Mask 是否符合預期，這將會影響到最終的預測結果。  
+
+這邊我是轉成 VOC 格式，使用 labelme/Scripts 資料夾底下的`labelme_json_to_dataset.exe`來進行轉檔。  
 ```
 python run_json.py
 ```
