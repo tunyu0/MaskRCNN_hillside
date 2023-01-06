@@ -105,7 +105,7 @@ tensorboard --logdir [dir_name]
 <img src="./figure/mrcnn07.png" width="500" alt="tensorboard1"/>
 
 可以觀察自己感興趣的 loss 學習曲線。  
-<img src="./figure/mrcnn08.png" width="300" alt="tensorboard2"/>
+<img src="./figure/mrcnn09.png" width="300" alt="tensorboard2"/>
 
 ## Reference
 [1] https://github.com/matterport/Mask_RCNN  
