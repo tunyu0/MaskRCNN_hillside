@@ -101,7 +101,7 @@ Inference:
 %load_ext tensorboard
 tensorboard --logdir [dir_name]
 ```
-可以看到紀錄了  Mask RCNN 的3種 Loss(類別、bbox位置、mask)。  
+可以看到紀錄了  Mask RCNN 的3種 Loss(類別、bbox位置、mask)，以及只針對 RPN 的3種 Loss。
 <img src="./figure/mrcnn07.png" width="500" alt="tensorboard1"/>
 
 可以觀察自己感興趣的 loss 學習曲線。  
