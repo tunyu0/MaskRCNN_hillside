@@ -102,10 +102,10 @@ Inference:
 tensorboard --logdir [dir_name]
 ```
 可以看到紀錄了  Mask RCNN 的3種 Loss(類別、bbox位置、mask)。
-<img src="./figure/mrcnn07.jpg" width="700" alt="tensorboard1"/>
+<img src="./figure/mrcnn07.png" width="700" alt="tensorboard1"/>
 
 可以觀察自己感興趣的 loss 學習曲線。
-<img src="./figure/mrcnn08.jpg" width="700" alt="tensorboard2"/>
+<img src="./figure/mrcnn08.png" width="700" alt="tensorboard2"/>
 
 ## Reference
 [1] https://github.com/matterport/Mask_RCNN  
