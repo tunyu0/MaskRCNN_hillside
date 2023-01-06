@@ -93,7 +93,7 @@ input:
 Inference:  
 <img src="./figure/mrcnn06.png" width="700" alt="output"/>  
 給 Mask RCNN 做 Instance Segmentation 後，可以看到有兩個類別為「Green」的 Instances 有順利被區分出來，也有印出感興趣的類別在整張圖片中所佔的比例。  
-不過也發現輪廓還切割得不夠精細，是因為 Mask RCNN 的參數量較龐大，做 Instance Segmentation 的訓練時間也比較長，在 Colab 中只夠訓練10個 epochs 就被迫斷線了。  
+不過也發現輪廓還切割得不夠精細，是因為 Mask RCNN 的參數量較龐大，做 Instance Segmentation 的訓練時間也比較長，在 Colab 中可能訓練不到10個 epochs 就會被斷線，上圖 Inference 是使用第8個 epoch 的權重。  
 若在計算力強大且穩定的設備上做訓練更多個 epochs，可以得到更加精緻的 Instance Segmentation 效果。
 
 ## TensorBoard
@@ -101,6 +101,11 @@ Inference:
 %load_ext tensorboard
 tensorboard --logdir [dir_name]
 ```
+可以看到紀錄了  Mask RCNN 的3種 Loss(類別、bbox位置、mask)。
+<img src="./figure/mrcnn07.jpg" width="700" alt="tensorboard1"/>
+
+可以觀察自己感興趣的 loss 學習曲線。
+<img src="./figure/mrcnn08.jpg" width="700" alt="tensorboard2"/>
 
 ## Reference
 [1] https://github.com/matterport/Mask_RCNN  
