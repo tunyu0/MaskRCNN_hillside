@@ -96,6 +96,11 @@ Inference:
 不過也發現輪廓還切割得不夠精細，是因為 Mask RCNN 的參數量較龐大，做 Instance Segmentation 的訓練時間也比較長，在 Colab 中只夠訓練10個 epochs 就被迫斷線了。  
 若在計算力強大且穩定的設備上做訓練更多個 epochs，可以得到更加精緻的 Instance Segmentation 效果。
 
+## TensorBoard
+```
+%load_ext tensorboard
+tensorboard --logdir [dir_name]
+```
 
 ## Reference
 [1] https://github.com/matterport/Mask_RCNN  
